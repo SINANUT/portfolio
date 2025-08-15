@@ -6,7 +6,18 @@
     <title>Portfolio</title>
      <link rel="stylesheet" href="port.css">
      <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+     <script src="port.js"></script>
     
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "SZ5l6xVb9HJE--ZtZ",
+      });
+   })();
+</script>
 </head>
 <body>
 
@@ -112,11 +123,11 @@ Outside of coding, I enjoy exploring creative ideas, solving problems, and pushi
 
         
         <label for="name">Name</label>
-        <form action="https://api.web3forms.com/submit" method="POST"> 
+        
         <input type="text" id="name" placeholder="Enter Your Name" required>
       </div>
 
-       <input type="hidden" name="access_key" value="15dcbe30-5dac-4447-a4fd-7ed528defb4e">
+   
 
       <div class="form-group">
         <label for="email">Email</label>
@@ -128,7 +139,7 @@ Outside of coding, I enjoy exploring creative ideas, solving problems, and pushi
         <textarea id="message" placeholder="Enter Your Message" rows="5" required></textarea>
       </div>
       
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn" onclick="sendMail()">Send Message</button>
     </div>
     </form>
     
